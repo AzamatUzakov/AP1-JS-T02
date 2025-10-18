@@ -352,9 +352,13 @@ class HumanPlayer extends Player {
     constructor(name, boardSize) {
         super(name, boardSize)
     }
+
+    //Переопределяю функцию из Player
     placeShips(ship) {// вызов функции у экземпляра Board, для размещение корабля
         this._board.placeShip(ship, ship.coordinatesX, ship.coordinatesY)
     }
+
+    //Переопределяю функцию из Player
     takeTurn(opponent) {//Функция принимает аргумент ввиде экземпляр игрока и возврощает кардинаты и сам объект
         let x = +prompt("Кординаты по X  для атаки")
         let y = +prompt("Кординаты по Y  для атаки")
